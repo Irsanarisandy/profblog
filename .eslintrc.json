@@ -1,0 +1,17 @@
+{
+  "extends": ["standard", "standard-react"],
+  "parser": "babel-eslint",
+  "rules": {
+    "react/jsx-indent": [1, 4],
+    "react/jsx-indent-props": [1, 4],
+    "camelcase": "warn",
+    "indent": ["warn", 4],
+    "jsx-quotes": ["error", "prefer-double"],
+    "max-len": "off",
+    "no-undef": "warn",
+    "no-unused-vars": "warn",
+    "prefer-const": "warn",
+    "semi": "off",
+    "space-before-function-paren": "off"
+  }
+}

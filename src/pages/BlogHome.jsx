@@ -1,4 +1,5 @@
 import Butter from 'buttercms';
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -13,7 +14,7 @@ class BlogHome extends React.Component {
     }
 
     fetchPosts(page) {
-        butter.post.list({page: page, page_size: 10}).then((resp) => {
+        butter.post.list({ page: page, page_size: 10 }).then((resp) => {
             this.setState({
                 loaded: true,
                 resp: resp.data
@@ -22,7 +23,7 @@ class BlogHome extends React.Component {
     }
 
     componentDidMount() {
-        let page = this.props.match.params.page;
+        const page = this.props.match.params.page;
         this.fetchPosts(page);
     }
 
@@ -36,10 +37,8 @@ class BlogHome extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (prevProps.match !== this.props.match) {
-            let page = prevProps.match.params.page;
+            const page = prevProps.match.params.page;
             this.fetchPosts(page);
-        } else if (this.loaded) {
-            this.setState({loaded: false});
         }
     }
 
@@ -47,7 +46,7 @@ class BlogHome extends React.Component {
         if (this.state.loaded) {
             const { next_page, previous_page } = this.state.resp.meta;
             return (
-                <div>
+                <div className="posts-container">
                     {this.state.resp.data.map((post) => (
                         <div key={post.slug}>
                             <Link to={`/post/${post.slug}`}>{post.title}</Link>
@@ -69,5 +68,9 @@ class BlogHome extends React.Component {
         }
     }
 }
+
+BlogHome.propTypes = {
+    match: PropTypes.object
+};
 
 export default BlogHome;

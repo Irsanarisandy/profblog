@@ -1,4 +1,5 @@
 import Butter from 'buttercms';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 const butter = Butter(process.env.REACT_APP_BUTTER);
@@ -12,7 +13,7 @@ class BlogPost extends React.Component {
     }
 
     componentDidMount() {
-        let slug = this.props.match.params.slug;
+        const slug = this.props.match.params.slug;
         butter.post.retrieve(slug).then((resp) => {
             this.setState({
                 loaded: true,
@@ -25,9 +26,9 @@ class BlogPost extends React.Component {
         if (this.state.loaded) {
             const post = this.state.post;
             return (
-                <div>
+                <div className="post-container">
                     <h1>{post.title}</h1>
-                    <div dangerouslySetInnerHTML={{__html: post.body}} />
+                    <div dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
             );
         } else {
@@ -39,5 +40,9 @@ class BlogPost extends React.Component {
         }
     }
 }
+
+BlogPost.propTypes = {
+    match: PropTypes.object
+};
 
 export default BlogPost;
