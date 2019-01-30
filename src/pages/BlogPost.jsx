@@ -1,4 +1,5 @@
 import Butter from 'buttercms';
+import Moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -23,21 +24,22 @@ class BlogPost extends React.Component {
     }
 
     render() {
-        if (this.state.loaded) {
-            const post = this.state.post;
+        if (!this.state.loaded) {
             return (
-                <div className="post-container">
-                    <h1>{post.title}</h1>
-                    <div dangerouslySetInnerHTML={{ __html: post.body }} />
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                    Loading...
-                </div>
+                <p>Loading...</p>
             );
         }
+
+        const post = this.state.post;
+
+        return (
+            <div className="post-container">
+                <h1>{post.title}</h1>
+                <p>{`${post.author.first_name} ${post.author.last_name}`}</p>
+                <p>{Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}</p>
+                <div dangerouslySetInnerHTML={{ __html: post.body }} />
+            </div>
+        );
     }
 }
 

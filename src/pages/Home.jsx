@@ -1,10 +1,11 @@
 import React from 'react';
 
 const Home = () => (
-    <div className="app">
-        <div className="app-header">
-            <h2>My blog</h2>
-        </div>
+    <div className="jumbotron">
+        <h1 className="display-4">Hello, everyone!</h1>
+        <p className="lead">
+            Welcome to ProfBlog, a website for professional blogs.
+        </p>
     </div>
 );
 

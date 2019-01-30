@@ -43,29 +43,28 @@ class BlogHome extends React.Component {
     }
 
     render() {
-        if (this.state.loaded) {
-            const { next_page, previous_page } = this.state.resp.meta;
+        if (!this.state.loaded) {
             return (
-                <div className="posts-container">
-                    {this.state.resp.data.map((post) => (
-                        <div key={post.slug}>
-                            <Link to={`/post/${post.slug}`}>{post.title}</Link>
-                        </div>
-                    ))}
-                    <br />
-                    <div>
-                        {previous_page && <Link to={`/p/${previous_page}`}>Prev</Link>}
-                        {next_page && <Link to={`/p/${next_page}`}>Next</Link>}
-                    </div>
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                    Loading...
-                </div>
+                <p>Loading...</p>
             );
         }
+
+        const { next_page, previous_page } = this.state.resp.meta;
+
+        return (
+            <div className="posts-container">
+                {this.state.resp.data.map((post) => (
+                    <div key={post.slug}>
+                        <Link to={`/post/${post.slug}`}>{post.title}</Link>
+                    </div>
+                ))}
+                <br />
+                <div>
+                    {previous_page && <Link to={`/p/${previous_page}`}>Prev</Link>}
+                    {next_page && <Link to={`/p/${next_page}`}>Next</Link>}
+                </div>
+            </div>
+        );
     }
 }
 
