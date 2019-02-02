@@ -1,5 +1,4 @@
 .sidebar {
-    color: $white;
     padding: 20px;
     position: fixed;
     z-index: 1;
@@ -19,7 +18,7 @@
     }
 
     &__links {
-        color: $white;
+        color: $menu-color;
         display: block;
         margin-bottom: 20px;
 
@@ -27,8 +26,14 @@
             margin-bottom: 0;
         }
 
-        &:hover {
-            color: darken($white, 30%);
+        &:hover,
+        &:focus {
+            color: $menu-color-hover;
+            text-decoration: none;
+        }
+
+        &.active {
+            color: $menu-color-active;
         }
 
         &-text {

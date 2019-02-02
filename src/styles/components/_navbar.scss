@@ -1,8 +1,22 @@
 // Overwrite existing bootstrap styles
-.navbar-brand {
-    font-size: 1.6rem;
-}
+.navbar-dark {
+    .navbar-brand {
+        font-size: 1.6rem;
+    }
 
-.nav-link {
-    font-size: 1.2rem;
+    .navbar-nav {
+        .nav-link {
+            color: $menu-color;
+            font-size: 1.2rem;
+
+            &:hover,
+            &:focus {
+                color: $menu-color-hover;
+            }
+
+            &.active {
+                color: $menu-color-active;
+            }
+        }
+    }
 }

@@ -15,7 +15,7 @@ const Navbar = ({ onClick }) => (
             <div className="collapse navbar-collapse">
                 <div className="navbar-nav mr-auto">
                     <NavLink className="nav-link" to="/p/1">
-                        Blog Posts
+                        <span>Blog Posts</span>
                     </NavLink>
                 </div>
             </div>
