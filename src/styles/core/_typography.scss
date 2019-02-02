@@ -11,4 +11,20 @@ code {
 
 img {
     max-width: 100%;
+
+    &.butter {
+        &-float {
+            &-left {
+                float: left;
+            }
+
+            &-right {
+                float: right;
+            }
+        }
+    }
+}
+
+table {
+    @extend .table;
 }

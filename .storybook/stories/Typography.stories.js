@@ -1,100 +1,367 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import earth from '../images/earth.png';
+import placeholder from '../images/placeholder.png';
 
 storiesOf('Styleguide', module)
     .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
     .add('Typography', () => (
         <div style={{ margin: "0 20px", }}>
-            <h1>The Earth <br/><i>The Starting Point</i></h1>
+            <h1>Styleguide</h1>
 
-            <a href="http://hypertexthero.com/work/earth-among-the-stars" title="Earth Among The Stars"><img src={earth} alt="Earth"/></a>
+            <h3>Paragraph</h3>
 
-            <p className="lead">One night when I had tasted bitterness I went out on to the hill. Dark heather checked my feet. Below marched the suburban lamps.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas,  diam sit amet faucibus dictum, turpis libero porttitor diam, id  pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam  porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin  dignissim, ligula id rhoncus fringilla, nunc lectus luctus magna, vitae  cursus neque arcu id risus. Phasellus eu risus quis mauris consectetur  luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus  mauris. Nulla euismod massa ac nisl gravida dictum. Fusce leo turpis,  accumsan non ultricies sed, consectetur id dui. Suspendisse porttitor  odio in ipsum dignissim mollis.</p>
 
-            <p>Windows, their curtains drawn, were shut eyes, inwardly watching the lives of dreams. Beyond the sea’s level darkness a lighthouse pulsed. Overhead, obscurity. I distinguished our own house, our islet in the tumultuous and bitter currents of the world. There, for a decade and a half, we two, so different in quality, had grown in and in to one another, for mutual support and nourishment, in intricate symbiosis. There daily we planned our several undertakings, and recounted the day’s oddities and vexations. There letters piled up to be answered, socks to be darned. There the children were born, those sudden new lives. There, under that roof, our own two lives, recalcitrant sometimes to one another, were all the while thankfully one, one larger, more <a href="http://ebooks.adelaide.edu.au/s/stapledon/olaf/star/chapter1.html#chapter1">conscious life</a> than either alone.</p>
-
-            <h2>All This, Surely, Was Good</h2>
-
-            <p>Yet there was bitterness. And bitterness not only invaded us from the world; it welled up also within our own magic circle. For horror at our futility, at our own unreality, and not only at the world’s delirium, had driven me out on to the hill.</p>
-            <p>We were always hurrying from one little urgent task to another, but the upshot was insubstantial. Had we, perhaps, misconceived our whole existence? Were we, as it were, living from false premises? And in particular, this partnership of ours, this seemingly so well-based fulcrum for activity in the world, was it after all nothing but a little eddy of complacent and ingrown domesticity, ineffectively whirling on the surface of the great flux, having in itself no depth of being, and no significance? Had we perhaps after all deceived ourselves? Behind those rapt windows did we, like so many others, indeed live only a dream? In a sick world even the hale are sick. And we two, spinning our little life mostly by rote, seldom with clear cognizance, seldom with firm intent, were products of a sick world.</p>
-            <p>Yet this life of ours was not all sheer and barren fantasy. Was it not spun from the actual fibres of reality, which we gathered in with all the comings and goings through our door, all our traffic with the suburb and the city and with remoter cities, and with the ends of the earth? And were we not spinning together an authentic expression of our own nature? Did not our life issue daily as more or less firm threads of active living, and mesh itself into the growing web, the intricate, ever-proliferating pattern of mankind?</p>
-
-            <h3>I Considered “Us” With Quiet Interest</h3>
-
-            <p>And a kind of amused awe. How could I describe our relationship even to myself without either disparaging it or insulting it with the tawdry decoration of sentimentality? For this our delicate balance of dependence and independence, this coolly critical, shrewdly ridiculing, but loving mutual contact, was surely a microcosm of true community, was after all in its simple style an actual and living example of that high goal which the world seeks.</p>
-
-            <blockquote>
-                <p>I reflected that not one of the visible features of this celestial and living gem revealed the presence of man. Displayed before me, though invisible, were some of the most congested centers of human population. There below me lay huge industrial regions, blackening the air with smoke. Yet all this thronging life and humanly momentous enterprise had made no mark whatever on the features of the planet. From this high look-out the Earth would have appeared no different before the dawn of man. No visiting angel, or explorer from another planet, could have guessed that this bland orb teemed with vermin, with world-mastering, self-torturing, incipiently angelic beasts. <small>— Olaf Stapledon, <cite title="Star Maker">Star Maker</cite></small></p>
-            </blockquote>
-
-            <p>The whole world? The whole universe? Overhead, obscurity unveiled a star. One tremulous arrow of light, projected how many thousands of years ago, now stung my nerves with vision, and my heart with fear. For in such a universe as this what significance could there be in our fortuitous, our frail, our evanescent community?</p>
-
-            <h4>But Now Irrationally I Was Seized</h4>
-
-            <p>With a strange worship, not, surely of the star, that mere furnace which mere distance falsely sanctified, but of something other, which the dire contrast of the star and us signified to the heart. Yet what, what could thus be signified? Intellect, peering beyond the star, discovered no Star Maker, but only darkness; no Love, no Power even, but only Nothing.</p>
-
-            <h5>And Yet the Heart Praised</h5>
-
-            <p>Impatiently I shook off this folly, and reverted from the inscrutable to the familiar and the concrete. Thrusting aside worship, and fear also and bitterness, I determined to examine more coldly this remarkable “us,” this surprisingly impressive datum, which to ourselves remained basic to the universe, though in relation to the stars it appeared so slight a thing.</p>
-
-            <h6>Considered Even Without Reference to Our Belittling Cosmical Background</h6>
-
-            <p>We were after all insignificant, perhaps ridiculous. We were such a commonplace occurrence, so trite, so respectable. We were just a married couple, making shift to live together without undue strain. Marriage in our time was suspect. And ours, with its trivial romantic origin, was doubly suspect.</p>
-
-            <ul>
-                <li>We had first met when she was a child</li>
-                <li>Our eyes encountered</li>
-                <li>She looked at me for a moment with quiet attention</li>
-                <li>Even, I had romantically imagined, with obscure, deep-lying recognition
-                    <ul>
-                        <li>I, at any rate, recognized in that look</li>
-                        <li>So I persuaded myself in my fever of adolescence</li>
-                    </ul>
-                </li>
-                <li>My destiny</li>
-            </ul>
-
-            <p><strong>Yes!</strong> <em>How predestinate had seemed our union!</em> Yet now, in retrospect, how accidental. True, <del>of course</del>, that as a long-married couple we <kbd>fitted</kbd> rather neatly, like <small>two close trees whose trunks</small> have grown upwards together as a single shaft, mutually distorting, but mutually supporting. <abbr title="abbreviation title">ABC</abbr></p>
-
-            <ol>
-                <li>The Diversity of Worlds</li>
-                <li>Strange Mankinds</li>
-                <li>Nautiloids</li>
-                <li>The Earth
-                    <ul>
-                        <li>The Starting Point</li>
-                        <li>Earth Among the Stars</li>
-                    </ul>
-                </li>
-                <li>More Worlds</li>
-            </ol>
-
-            <p>Here's some code: <code>e = mc<sup>2</sup></code></p>
-
-            <pre>
-                <code className="code">
-                    And
-                    Some
-                    Poetry
-                </code>
-            </pre>
-
-            <dl>
-                <dt>Coldly</dt>
-                <dd>I now assessed her as merely a useful, but often infuriating adjunct to my personal life.</dd>
-                <dt>We</dt>
-                <dd>Were on the whole sensible companions.</dd>
-                <dd>We left one another a certain freedom, and so we were able to endure our proximity.</dd>
-                <dt>Such</dt>
-                <dd>Was our relationship.</dd>
-            </dl>
-
-            <hr/>
+            <h3>Paragraph (small, bold)</h3>
 
             <p>
-                <small>Text excerpt from <a href="http://ebooks.adelaide.edu.au/s/stapledon/olaf/star/"><i>Star Maker</i> by Olaf Stapledon</a></small>
+                Maecenas id dolor odio, eu elementum augue. Suspendisse odio nisi,  aliquet eu tempus quis, rutrum quis sem. Nulla volutpat cursus dolor  tempus consectetur. Proin faucibus, nulla at sodales interdum, lectus  lectus aliquet risus, ut rutrum velit ligula eget ligula. Sed volutpat,  elit non condimentum interdum, purus velit feugiat augue, id cursus  felis dui sed diam. Proin in lobortis tellus. Nullam fringilla dapibus  urna et pretium. Proin ac ligula ut purus luctus blandit ac ac lacus. Etiam molestie&nbsp;
+                <small>
+                    consectetur felis vitae mollis. Pellentesque semper  bibendum lectus, molestie porta odio aliquet vehicula. Nunc et volutpat  arcu.
+                </small>
+                &nbsp;Vestibulum ante ipsum primis in faucibus orci luctus et ultrices  posuere cubilia Curae; Cras pretium mauris eu dolor molestie hendrerit.  Duis lectus leo, gravida sed ullamcorper eu, pretium eu augue.&nbsp;
+                <b>
+                    Vestibulum eleifend, velit et dapibus dapibus, justo quam dictum diam, ac euismod augue ipsum ac leo.
+                </b>
+                &nbsp;Aliquam erat volutpat. Morbi a mi ac urna  tincidunt fermentum consectetur sit amet arcu.
             </p>
+
+            <h3>Macrons</h3>
+
+            <p>ĀĒĪŌŪāēīōū. He aha ngā mahi a te rongoā.</p>
+            <p><b>ĀĒĪŌŪāēīōū. He aha ngā mahi a te rongoā.</b></p>
+            <p><em>ĀĒĪŌŪāēīōū. He aha ngā mahi a te rongoā.</em></p>
+            <p><small>ĀĒĪŌŪāēīōū. He aha ngā mahi a te rongoā.</small></p>
+
+            <h2>Links</h2>
+
+            <p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing</a> elit.</p>
+            <p>Lorem ipsum dolor sit amet, <a href="https://www.google.com">consectetur adipiscing</a> elit.</p>
+
+            <h2>Lists</h2>
+
+            <h3>Unordered list (Short)</h3>
+
+            <ul>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                <li>Aliquam tincidunt mauris eu risus.</li>
+                <li>Vestibulum auctor dapibus neque.</li>
+            </ul>
+
+            <h3>Unordered list (Long)</h3>
+
+            <ul>
+                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+            </ul>
+
+            <h3>Unordered list (Nested)</h3>
+
+            <ul>
+                <li>
+                    Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                    diam. Sed arcu. Cras consequat.
+                </li>
+                <li>
+                    Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique
+                    cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+                </li>
+                <ul>
+                    <li>
+                        Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu
+                        erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                    </li>
+                    <ul>
+                        <li>
+                            Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                            diam. Sed arcu. Cras consequat.
+                        </li>
+                        <li>
+                            Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum
+                            vulputate, nunc.
+                        </li>
+                        <ul>
+                            <li>
+                                Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem
+                                tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+                            </li>
+                            <ul>
+                                <li>
+                                    Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum
+                                    vulputate, nunc.
+                                </li>
+                            </ul>
+                        </ul>
+                        <li>
+                            Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu
+                            erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+                        </li>
+                    </ul>
+                </ul>
+            </ul>
+
+            <h3>Ordered list (Short)</h3>
+
+            <ol>
+                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                <li>Aliquam tincidunt mauris eu risus.</li>
+                <li>Vestibulum auctor dapibus neque.</li>
+            </ol>
+
+            <h3>Ordered list (Long)</h3>
+
+            <ol>
+                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+            </ol>
+
+            <h3>Ordered list (Nested)</h3>
+
+            <ol>
+                <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                <ol>
+                    <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                    <ol>
+                        <li>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.</li>
+                        <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                        <ol>
+                            <li>Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</li>
+                            <ol>
+                                <li>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</li>
+                            </ol>
+                        </ol>
+                        <li>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</li>
+                    </ol>
+                </ol>
+            </ol>
+
+            <h2>Blockquote</h2>
+
+            <blockquote>
+                <p>Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.</p>
+            </blockquote>
+
+            <h2>Images</h2>
+
+            <div>
+                <p>
+                    Images can be added through the WYSIWYG fields in the CMS using the `Insert Media` action. The layout of
+                    the image can be modified with the `Alignment / style` dropdown field.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <img src={placeholder} />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <img class="butter-float-left" src={placeholder} />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <img class="butter-float-right" src={placeholder} />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+
+                <h3>Images (Caption)</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <div>
+                    <img src={placeholder} />
+                    <p>This is a caption</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <div style={{"text-align": "left"}}>
+                    <img src={placeholder} />
+                    <p>This is a caption</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+                <div style={{"text-align": "right"}}>
+                    <img src={placeholder} />
+                    <p>This is a caption</p>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum,
+                    turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam
+                    porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus
+                    fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris
+                    consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod
+                    massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui.
+                    Suspendisse porttitor odio in ipsum dignissim mollis.
+                </p>
+            </div>
+
+            <h2>Tables</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Username</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@motto</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sarah</td>
+                        <td>Connor</td>
+                        <td>@sconnor</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@larrythebird</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>#</td>
+                        <td>First Name</td>
+                        <td>Last Name</td>
+                        <td>Username</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@motto</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sarah</td>
+                        <td>Connor</td>
+                        <td>@sconnor</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@larrythebird</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@motto</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Sarah</td>
+                        <td>Connor</td>
+                        <td>@sconnor</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@larrythebird</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 id="headings">Headings</h2>
+
+            <div>
+                <h1>h1. Heading 1</h1>
+                <h2>h2. Heading 2</h2>
+                <h3>h3. Heading 3</h3>
+                <h4>h4. Heading 4</h4>
+                <h5>h5. Heading 5</h5>
+                <h6>h6. Heading 6</h6>
+            </div>
+
+            <h1>Heading 1 <a href="#">link</a></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas, diam sit amet faucibus dictum, turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui. Suspendisse porttitor odio in ipsum dignissim mollis.</p>
+            <p>Maecenas id dolor odio, eu elementum augue. Suspendisse odio nisi, aliquet eu tempus quis, rutrum quis sem. Nulla volutpat cursus dolor tempus consectetur. Proin faucibus, nulla at sodales interdum, lectus lectus aliquet risus, ut rutrum velit ligula eget ligula. Sed volutpat, elit non condimentum interdum, purus velit feugiat augue, id cursus felis dui sed diam. Proin in lobortis tellus. Nullam fringilla dapibus urna et pretium. Proin ac ligula ut purus luctus blandit ac ac lacus. Etiam molestie consectetur felis vitae mollis. Pellentesque semper bibendum lectus, molestie porta odio aliquet vehicula. Nunc et volutpat arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras pretium mauris eu dolor molestie hendrerit. Duis lectus leo, gravida sed ullamcorper eu, pretium eu augue. Vestibulum eleifend, velit et dapibus dapibus, justo quam dictum diam, ac euismod augue ipsum ac leo. Aliquam erat volutpat. Morbi a mi ac urna tincidunt fermentum consectetur sit amet arcu.</p>
+
+            <h2>Heading 2 <a href="#">link</a></h2>
+            <p>Nam posuere augue et leo rutrum condimentum. Etiam a odio blandit odio aliquam hendrerit. In hac habitasse platea dictumst. Ut iaculis facilisis justo, a elementum felis imperdiet et. Vestibulum gravida volutpat condimentum. Aliquam condimentum, turpis eu tempus iaculis, neque risus cursus mauris, id lacinia elit eros ut diam. Curabitur lobortis pellentesque posuere. Aliquam magna eros, auctor vitae faucibus sit amet, ullamcorper a est. In hac habitasse platea dictumst. Vestibulum condimentum dui eu mi pretium adipiscing. Ut dictum vestibulum imperdiet.</p>
+
+            <h3>Heading 3 <a href="#">link</a></h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas,  diam sit amet faucibus dictum, turpis libero porttitor diam, id pellentesque orci augue adipiscing risus. Nulla id lacus eros. Nam porttitor semper enim, sit amet vestibulum arcu adipiscing sed. Proin dignissim, ligula id rhoncus fringilla, nunc lectus luctus magna, vitae cursus neque arcu id risus. Phasellus eu risus quis mauris consectetur luctus. Sed facilisis diam mauris, a vulputate ligula. Sed nec purus mauris. Nulla euismod massa ac nisl gravida dictum. Fusce leo turpis, accumsan non ultricies sed, consectetur id dui. Suspendisse porttitor odio in ipsum dignissim mollis.</p>
+
+            <h4>Heading 4 <a href="#">link</a></h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie malesuada diam eu rhoncus. Aliquam justo elit, convallis sed eleifend condimentum, ornare at nisl. Sed at leo euismod velit egestas ultricies vel quis purus. Morbi accumsan fermentum ipsum convallis rhoncus. Aenean tincidunt, neque sed consequat pulvinar, sem felis ornare lectus, ac mattis purus eros vitae mauris. Vestibulum in metus sed nisi imperdiet faucibus ac sit amet orci. Duis sit amet tincidunt libero. Duis risus purus, rutrum eget bibendum et, faucibus sed magna. Donec metus nunc, eleifend id sollicitudin vitae, blandit pulvinar nisl. Ut adipiscing pretium mi vel malesuada. Aliquam id quam lectus. Duis fringilla purus eget ipsum semper iaculis. Nullam nec mauris leo, eu posuere lacus. Maecenas turpis massa, egestas et vestibulum ac, rutrum nec sapien. Nam consequat varius enim, quis congue quam elementum vel. Proin eleifend lobortis arcu, quis dignissim orci consequat sed. Nunc vel libero in lorem hendrerit adipiscing sit amet non eros. Praesent eget eros est.</p>
+
+            <h5>Heading 5 <a href="#">link</a></h5>
+            <p>Duis lectus dolor, euismod eu adipiscing sit amet, fringilla ut augue. Pellentesque tristique condimentum iaculis. Aliquam erat volutpat. Donec nec sapien urna. Vivamus nec felis dui, ut porta mauris. In mollis porttitor ipsum, vitae elementum erat lacinia imperdiet. Sed ut sem ut erat convallis pretium. Vestibulum nec orci nec urna ullamcorper tincidunt. Integer at massa sit amet orci cursus varius. Curabitur eu ipsum massa, at condimentum justo.</p>
+
+            <h6>Heading 6 <a href="#">link</a></h6>
+            <p>Duis lectus dolor, euismod eu adipiscing sit amet, fringilla ut augue. Pellentesque tristique condimentum iaculis. Aliquam erat volutpat. Donec nec sapien urna. Vivamus nec felis dui, ut porta mauris. In mollis porttitor ipsum, vitae elementum erat lacinia imperdiet. Sed ut sem ut erat convallis pretium. Vestibulum nec orci nec urna ullamcorper tincidunt. Integer at massa sit amet orci cursus varius. Curabitur eu ipsum massa, at condimentum justo.</p>
         </div>
     ));
