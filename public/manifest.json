@@ -1,6 +1,6 @@
 {
-  "short_name": "ProfBlog",
-  "name": "Professional Blog",
+  "short_name": "ProfBlog (React)",
+  "name": "Professional Blog (React)",
   "icons": [
     {
       "src": "favicon.ico",

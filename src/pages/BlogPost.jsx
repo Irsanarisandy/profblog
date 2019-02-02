@@ -2,6 +2,7 @@ import Butter from 'buttercms';
 import Moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 
 const butter = Butter(process.env.REACT_APP_BUTTER);
 
@@ -34,6 +35,11 @@ class BlogPost extends React.Component {
 
         return (
             <div className="post-container">
+                <Helmet>
+                    <title>{post.seo_title}</title>
+                    <meta name="description" content={post.meta_description} />
+                    <meta name="og:image" content={post.featured_image} />
+                </Helmet>
                 <h1>{post.title}</h1>
                 <p>{`${post.author.first_name} ${post.author.last_name}`}</p>
                 <p>{Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}</p>
