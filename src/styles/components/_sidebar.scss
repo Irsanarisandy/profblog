@@ -1,0 +1,38 @@
+.sidebar {
+    color: $white;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    width: $sidebar-width;
+    left: -$sidebar-width;
+    transform: translateX(-$sidebar-width);
+    transition: transform 0.4s linear;
+
+    &--show {
+        transform: translateX($sidebar-width);
+    }
+
+    &__break {
+        border-color: $white;
+        margin: 0 0 20px;
+    }
+
+    &__links {
+        color: $white;
+        display: block;
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: darken($white, 30%);
+        }
+
+        &-text {
+            font-size: 1.2rem;
+        }
+    }
+}
