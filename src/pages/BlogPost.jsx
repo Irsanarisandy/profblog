@@ -37,8 +37,22 @@ class BlogPost extends React.Component {
             <div className="post-container">
                 <Helmet>
                     <title>{post.seo_title}</title>
+                    <link rel="canonical" href={post.url} />
+                    <meta name="author" content={`${post.author.first_name} ${post.author.last_name}`} />
                     <meta name="description" content={post.meta_description} />
-                    <meta name="og:image" content={post.featured_image} />
+                    <meta name="keywords" content={post.tags.map(item => item.name).join(', ')} />
+
+                    <meta property="og:image" content={post.featured_image} />
+                    <meta property="og:description" content={post.meta_description} />
+                    <meta property="og:site_name" content="ProfBlog (React)" />
+                    <meta property="og:title" content={post.title} />
+                    <meta property="og:url" content={post.url} />
+
+                    <meta name="twitter:card" content={post.summary} />
+                    <meta name="twitter:description" content={post.meta_description} />
+                    <meta name="twitter:image" content={post.featured_image} />
+                    <meta name="twitter:title" content={post.title} />
+                    <meta name="twitter:url" content={post.url} />
                 </Helmet>
                 <h1>{post.title}</h1>
                 <p>{`${post.author.first_name} ${post.author.last_name}`}</p>

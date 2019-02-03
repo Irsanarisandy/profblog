@@ -44,6 +44,12 @@ class Routes extends React.Component {
                     <main className="container">
                         <Helmet>
                             <title>ProfBlog (React)</title>
+                            <link rel="canonical" href={document.location.origin} />
+
+                            <meta property="og:site_name" content="ProfBlog (React)" />
+                            <meta property="og:url" content={document.location.origin} />
+
+                            <meta name="twitter:url" content={document.location.origin} />
                         </Helmet>
                         <Switch>
                             <Route exact path="/" component={Home} />
