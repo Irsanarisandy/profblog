@@ -1,4 +1,5 @@
 import Butter from 'buttercms';
+import Moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -13,7 +14,7 @@ class BlogHome extends React.Component {
         };
     }
 
-    fetchPosts(page) {
+    fetchPosts = (page) => {
         butter.post.list({ page: page, page_size: 10 }).then((resp) => {
             this.setState({
                 loaded: true,
@@ -52,16 +53,36 @@ class BlogHome extends React.Component {
         const { next_page, previous_page } = this.state.resp.meta;
 
         return (
-            <div className="posts-container">
-                {this.state.resp.data.map((post) => (
-                    <div key={post.slug}>
-                        <Link to={`/post/${post.slug}`}>{post.title}</Link>
+            <div className="posts__container">
+                {(previous_page || next_page) &&
+                    <div className="d-flex justify-content-between posts__navigation">
+                        {previous_page &&
+                            <Link to={`/p/${previous_page}`}>
+                                <span className="posts__navigation-text">Previous Page</span>
+                            </Link>
+                        }
+                        {next_page &&
+                            <Link to={`/p/${next_page}`}>
+                                <span className="posts__navigation-text">Next Page</span>
+                            </Link>
+                        }
                     </div>
-                ))}
-                <br />
-                <div>
-                    {previous_page && <Link to={`/p/${previous_page}`}>Prev</Link>}
-                    {next_page && <Link to={`/p/${next_page}`}>Next</Link>}
+                }
+                <div className="posts__contents">
+                    {this.state.resp.data.map((post) => (
+                        <div key={post.slug} className="posts__pages">
+                            <Link to={`/post/${post.slug}`}>
+                                <h1>{post.title}</h1>
+                            </Link>
+                            <p className="posts__info">
+                                {`${post.author.first_name} ${post.author.last_name}`}
+                            </p>
+                            <p className="posts__info">
+                                {Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}
+                            </p>
+                            <p className="posts__info">{post.summary}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
         );

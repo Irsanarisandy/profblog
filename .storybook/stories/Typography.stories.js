@@ -6,7 +6,7 @@ import placeholder from '../images/placeholder.png';
 storiesOf('Styleguide', module)
     .addDecorator((storyFn, context) => withInfo()(storyFn)(context))
     .add('Typography', () => (
-        <div style={{ margin: "0 20px", }}>
+        <div style={{ margin: "20px", }}>
             <h1>Styleguide</h1>
 
             <h3>Paragraph</h3>

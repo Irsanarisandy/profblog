@@ -15,7 +15,7 @@ class Routes extends React.Component {
         super();
         this.state = {
             mobileMenuState: false
-        }
+        };
     }
 
     openMobileMenu = () => {
@@ -30,7 +30,7 @@ class Routes extends React.Component {
             // activates after the state has been set
             document.body.style.overflow = 'visible';
         });
-    }
+    };
 
     render() {
         let { mobileMenuState } = this.state;

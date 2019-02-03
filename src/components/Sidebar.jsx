@@ -17,6 +17,6 @@ const Sidebar = ({ onClick, mobileMenuState }) => (
 Sidebar.propTypes = {
     onClick: PropTypes.func,
     mobileMenuState: PropTypes.bool
-}
+};
 
 export default Sidebar;

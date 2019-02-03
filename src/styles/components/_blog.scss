@@ -1,0 +1,19 @@
+.posts {
+    &__navigation {
+        margin-bottom: 25px;
+
+        &-text {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__pages {
+        margin-bottom: 25px;
+    }
+
+    &__info {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

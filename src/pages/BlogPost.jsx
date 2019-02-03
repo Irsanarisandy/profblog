@@ -34,7 +34,7 @@ class BlogPost extends React.Component {
         const post = this.state.post;
 
         return (
-            <div className="post-container">
+            <div className="post__container">
                 <Helmet>
                     <title>{post.seo_title}</title>
                     <link rel="canonical" href={post.url} />
