@@ -10,7 +10,7 @@
     "declaration-property-unit-blacklist": {
       "line-height": ["px", "rem", "em"]
     },
-    "indentation": [4, { "severity": "warning" }],
+    "indentation": [2, { "severity": "warning" }],
     "max-nesting-depth": [4, { "severity": "warning" }],
     "selector-max-id": [0, { "severity": "warning" }],
     "string-quotes": "single",

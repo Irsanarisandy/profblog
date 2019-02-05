@@ -11,59 +11,59 @@ import BlogHome from './pages/BlogHome';
 import BlogPost from './pages/BlogPost';
 
 class Routes extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            mobileMenuState: false
-        };
-    }
-
-    openMobileMenu = () => {
-        this.setState({ mobileMenuState: true }, () => {
-            // activates after the state has been set
-            document.body.style.overflow = 'hidden';
-        });
+  constructor() {
+    super();
+    this.state = {
+      mobileMenuState: false
     };
+  }
 
-    closeMobileMenu = () => {
-        this.setState({ mobileMenuState: false }, () => {
-            // activates after the state has been set
-            document.body.style.overflow = 'visible';
-        });
-    };
+  openMobileMenu = () => {
+    this.setState({ mobileMenuState: true }, () => {
+      // activates after the state has been set
+      document.body.style.overflow = 'hidden';
+    });
+  };
 
-    render() {
-        let { mobileMenuState } = this.state;
+  closeMobileMenu = () => {
+    this.setState({ mobileMenuState: false }, () => {
+      // activates after the state has been set
+      document.body.style.overflow = 'visible';
+    });
+  };
 
-        return (
-            <BrowserRouter>
-                <div>
-                    <Sidebar onClick={this.closeMobileMenu} mobileMenuState={mobileMenuState} />
-                    <Navbar onClick={this.openMobileMenu} />
-                    <div className={`overlay${mobileMenuState ? '--show' : ''}`} onClick={this.closeMobileMenu} />
-                    <main className="container">
-                        <Helmet>
-                            <title>ProfBlog (React)</title>
-                            <link rel="canonical" href={document.location.origin} />
+  render() {
+    let { mobileMenuState } = this.state;
 
-                            <meta property="og:site_name" content="ProfBlog (React)" />
-                            <meta property="og:url" content={document.location.origin} />
+    return (
+      <BrowserRouter>
+        <div>
+          <Sidebar onClick={this.closeMobileMenu} mobileMenuState={mobileMenuState} />
+          <Navbar onClick={this.openMobileMenu} />
+          <div className={`overlay${mobileMenuState ? '--show' : ''}`} onClick={this.closeMobileMenu} />
+          <main className="container">
+            <Helmet>
+              <title>ProfBlog (React)</title>
+              <link rel="canonical" href={document.location.origin} />
 
-                            <meta name="twitter:url" content={document.location.origin} />
-                        </Helmet>
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Redirect exact from="/p" to="/p/1" />
-                            <Redirect exact from="/post" to="/p/1" />
-                            <Route path="/p/:page" component={BlogHome} />
-                            <Route path="/post/:slug" component={BlogPost} />
-                        </Switch>
-                    </main>
-                    <Footer />
-                </div>
-            </BrowserRouter>
-        );
-    }
+              <meta property="og:site_name" content="ProfBlog (React)" />
+              <meta property="og:url" content={document.location.origin} />
+
+              <meta name="twitter:url" content={document.location.origin} />
+            </Helmet>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Redirect exact from="/p" to="/p/1" />
+              <Redirect exact from="/post" to="/p/1" />
+              <Route path="/p/:page" component={BlogHome} />
+              <Route path="/post/:slug" component={BlogPost} />
+            </Switch>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default Routes;

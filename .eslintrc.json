@@ -2,10 +2,10 @@
   "extends": ["standard", "standard-react"],
   "parser": "babel-eslint",
   "rules": {
-    "react/jsx-indent": [1, 4],
-    "react/jsx-indent-props": [1, 4],
+    "react/jsx-indent": [1, 2],
+    "react/jsx-indent-props": [1, 2],
     "camelcase": "warn",
-    "indent": ["warn", 4],
+    "indent": ["warn", 2],
     "jsx-quotes": ["error", "prefer-double"],
     "max-len": "off",
     "no-undef": "warn",
