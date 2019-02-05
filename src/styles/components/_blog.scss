@@ -8,12 +8,34 @@
   }
 
   &__pages {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+  }
+
+  &__image-block {
+    margin-bottom: 20px;
   }
 
   &__info {
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &__pages--with-image {
+      display: flex;
+    }
+
+    &__image-block {
+      align-self: center;
+      margin-bottom: 0;
+      width: 45%;
+    }
+
+    &__content--with-image {
+      align-self: start;
+      margin-left: 20px;
+      width: calc(55% - 20px);
     }
   }
 }

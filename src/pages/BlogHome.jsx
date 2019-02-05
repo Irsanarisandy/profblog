@@ -15,12 +15,10 @@ class BlogHome extends React.Component {
   }
 
   fetchPosts = (page) => {
-    butter.post.list({ page: page, page_size: 10 }).then((resp) => {
-      this.setState({
-        loaded: true,
-        resp: resp.data
-      });
-    });
+    butter.post.list({ page: page, page_size: 10 }).then((resp) => this.setState({
+      loaded: true,
+      resp: resp.data
+    })).catch((err) => console.error(err));
   }
 
   componentDidMount() {
@@ -68,19 +66,28 @@ class BlogHome extends React.Component {
             }
           </div>
         }
-        <div className="posts__contents">
+        <div>
           {this.state.resp.data.map((post) => (
-            <div key={post.slug} className="posts__pages">
-              <Link to={`/post/${post.slug}`}>
-                <h1>{post.title}</h1>
-              </Link>
-              <p className="posts__info">
-                {`${post.author.first_name} ${post.author.last_name}`}
-              </p>
-              <p className="posts__info">
-                {Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}
-              </p>
-              <p className="posts__info">{post.summary}</p>
+            <div key={post.slug} className={`posts__pages${post.featured_image ? ' posts__pages--with-image' : ''}`}>
+              {post.featured_image &&
+                <div className="posts__image-block">
+                  <img src={post.featured_image} alt={post.slug} />
+                </div>
+              }
+              <div className={`posts__content${post.featured_image ? ' posts__content--with-image' : ''}`}>
+                <Link to={`/post/${post.slug}`}>
+                  <h1>{post.title}</h1>
+                </Link>
+                {post.author &&
+                  <p className="posts__info">
+                    {`${post.author.first_name} ${post.author.last_name}`}
+                  </p>
+                }
+                <p className="posts__info">
+                  {Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}
+                </p>
+                <p className="posts__info">{post.summary}</p>
+              </div>
             </div>
           ))}
         </div>

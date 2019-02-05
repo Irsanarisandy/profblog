@@ -16,12 +16,10 @@ class BlogPost extends React.Component {
 
   componentDidMount() {
     const slug = this.props.match.params.slug;
-    butter.post.retrieve(slug).then((resp) => {
-      this.setState({
-        loaded: true,
-        post: resp.data.data
-      });
-    });
+    butter.post.retrieve(slug).then((resp) => this.setState({
+      loaded: true,
+      post: resp.data.data
+    })).catch((err) => console.error(err));
   }
 
   render() {
@@ -55,7 +53,7 @@ class BlogPost extends React.Component {
           <meta name="twitter:url" content={post.url} />
         </Helmet>
         <h1>{post.title}</h1>
-        <p>{`${post.author.first_name} ${post.author.last_name}`}</p>
+        {post.author && <p>{`${post.author.first_name} ${post.author.last_name}`}</p>}
         <p>{Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}</p>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
       </div>
