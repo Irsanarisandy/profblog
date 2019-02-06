@@ -2,6 +2,7 @@ import Butter from 'buttercms';
 import Moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const butter = Butter(process.env.REACT_APP_BUTTER);
@@ -52,6 +53,14 @@ class BlogHome extends React.Component {
 
     return (
       <div className="posts__container">
+        <Helmet>
+          <title>ProfBlog (React) - Blog Posts</title>
+          <link rel="canonical" href={document.location.href} />
+
+          <meta property="og:url" content={document.location.href} />
+
+          <meta name="twitter:url" content={document.location.href} />
+        </Helmet>
         {(previous_page || next_page) &&
           <div className="d-flex justify-content-between posts__navigation">
             {previous_page &&

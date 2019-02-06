@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import Sidebar from './components/Sidebar';
@@ -42,15 +41,6 @@ class Routes extends React.Component {
           <Navbar onClick={this.openMobileMenu} />
           <div className={`overlay${mobileMenuState ? '--show' : ''}`} onClick={this.closeMobileMenu} />
           <main className="container">
-            <Helmet>
-              <title>ProfBlog (React)</title>
-              <link rel="canonical" href={document.location.origin} />
-
-              <meta property="og:site_name" content="ProfBlog (React)" />
-              <meta property="og:url" content={document.location.origin} />
-
-              <meta name="twitter:url" content={document.location.origin} />
-            </Helmet>
             <Switch>
               <Route exact path="/" component={Home} />
               <Redirect exact from="/p" to="/p/1" />
