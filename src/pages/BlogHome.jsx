@@ -93,7 +93,7 @@ class BlogHome extends React.Component {
                   </p>
                 }
                 <p className="posts__info">
-                  {Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}
+                  {Moment(post.published).tz('Pacific/Auckland').format('Do MMM YYYY z')}
                 </p>
                 <p className="posts__info">{post.summary}</p>
               </div>

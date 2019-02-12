@@ -53,7 +53,7 @@ class BlogPost extends React.Component {
         </Helmet>
         <h1>{post.title}</h1>
         {post.author && <p>{`${post.author.first_name} ${post.author.last_name}`}</p>}
-        <p>{Moment(post.created).tz('Pacific/Auckland').format('Do MMM YYYY LT z')}</p>
+        <p>{Moment(post.published).tz('Pacific/Auckland').format('Do MMM YYYY z')}</p>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
       </div>
     );

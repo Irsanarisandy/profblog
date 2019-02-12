@@ -41,3 +41,8 @@ img {
 table {
   @extend .table;
 }
+
+blockquote {
+  border-left: 4px solid $black;
+  padding-left: 10px;
+}
